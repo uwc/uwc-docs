@@ -1,0 +1,123 @@
+// ==== CONTENT ==== //
+
+// Style the page and post content here.
+
+// 1. Content
+// 2. Related posts
+
+// Container
+
+.content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @media (min-width: 48rem) {
+    max-width: 38rem;
+    margin-right: 2rem;
+    margin-left: 20rem;
+  }
+
+  @media (min-width: 64rem) {
+    margin-right: 4rem;
+    margin-left: 22rem;
+  }
+
+  h1 {
+    @include font(header1);
+  }
+
+  h2 {
+    @include font(header2);
+  }
+
+  p {
+    @include font(body);
+  }
+
+  // Quotes
+  blockquote {
+    margin: .8rem 0;
+    padding: .5rem 1rem;
+    border-left: .25rem solid #e5e5e5;
+    color: #7a7a7a;
+
+    @media (min-width: 30rem) {
+      padding-right: 5rem;
+      padding-left: 1.25rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.content-header {
+  @include ctnr(golden);
+
+  padding-top: vr(6);
+  padding-bottom: vr(2);
+}
+
+.content-icon {
+  display: block;
+  width: 25%;
+  height: 25%;
+  margin: 0 auto;
+  fill: url("#icon-gradient");
+
+  stop:first-child {
+    stop-color: palette($secondary);
+  }
+
+  stop:last-child {
+    stop-color: palette($primary);
+  }
+}
+
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+
+  pre {
+    margin-bottom: 0;
+  }
+}
+
+// Messages
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #717171;
+}
+
+// Meta data line below post title
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+
+// 2. Related posts
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li a:hover {
+    color: #268bd2;
+    text-decoration: none;
+  }
+}

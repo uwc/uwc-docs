@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+      <nav id="nav" class="nav">
+        {% include custom/navigation.html context="/" %}
+      </nav>
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>

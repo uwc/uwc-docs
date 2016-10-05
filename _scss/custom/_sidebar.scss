@@ -1,0 +1,42 @@
+// === SIDEBAR === //
+
+// Style the sidebar and content here.
+
+.sidebar {
+  padding: 2rem 1rem;
+  background-color: #202020;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+
+  @media (min-width: 48rem) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 18rem;
+    text-align: left;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+// Sidebar nav
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-nav-item {
+  display: block;
+
+  &.active {
+    font-weight: bold;
+  }
+}
+
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}

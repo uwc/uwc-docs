@@ -1,0 +1,21 @@
+<aside id="metabar" class="metabar -{{ include.theme }}">
+	<div class="metabar-wrapper">
+		<div class="metabar-left">
+			<a class="metabar-fingerprint" href="http://connorbaer.io/{% if site.url == 'http://connorbaer.io' and page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Go to the homepage.">
+			</a>
+		</div>
+		<div class="metabar-center">
+			<a class="metabar-logo" href="{{ site.url }}{{ site.baseurl }}{% if page.url == '/' %}#" data-scroll{% else %}"{% endif %} aria-label="Go to the homepage.">
+				{% include custom/logo.html %}
+			</a>
+		</div>
+		<div class="metabar-right">
+			<a class="metabar-icon" href="https://twitter.com/connor_baer" target="_blank" rel="noopener noreferrer" aria-label="Go to my Twitter profile.">
+			</a>
+			<a class="metabar-icon" href="https://blog.connorbaer.io/" target="_blank" rel="noopener noreferrer" aria-label="Go to my Medium publication.">
+			</a>
+			<a class="metabar-icon" href="https://github.com/connor-baer" target="_blank" rel="noopener noreferrer" aria-label="Go to my GitHub profile.">
+			</a>
+		</div>
+	</div>
+</aside>

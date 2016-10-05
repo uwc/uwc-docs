@@ -1,0 +1,76 @@
+// ==== NAVIGATION ==== //
+
+// Style the navigation here.
+
+// 1. Container
+// 2. Elements
+
+// 1. Container //
+
+.nav-wrapper {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 12px 0 16px;
+  list-style: none;
+  text-align: center;
+  box-shadow: 0 0 1px 0 transparent;
+
+  // Headroom
+
+  .headroom & {
+    transition: transform $long, background-color $long;
+    z-index: 9999;
+  }
+
+  .headroom--not-top & {
+    background-color: palette(white);
+    box-shadow: 0 0 1px 0 palette(gray, light);
+  }
+
+  .headroom--pinned & {
+    transform: translateY(0%);
+  }
+
+  .headroom--unpinned & {
+    transform: translateY(100%);
+  }
+}
+
+// 2. Elements //
+
+.nav-link {
+  @include font(header3);
+
+  transition: color $short;
+  color: palette(gray, dark);
+
+  &:hover {
+    color: palette($primary);
+  }
+
+  // Light theme
+
+  .headroom--top .nav.-light & {
+    color: palette(white);
+  }
+
+  .headroom--top .nav.-light &:hover {
+    color: palette($primary);
+  }
+}
+
+.nav-icon {
+  transition: fill $short;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 vr(0.75);
+  padding: 0;
+}

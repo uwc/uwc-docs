@@ -39,6 +39,19 @@ author:
 
 version:              1.0.0
 
-
 github:
   repo:               https://github.com/uwc/uwc-docs
+
+# Integrations
+# typekit:              rnf3gir
+
+google_fonts:
+  Source Sans Pro:    400, 600, 700
+  Source Serif Pro:
+  Source Code Pro:
+
+# google_analytics_key: UA-37412525-4
+# google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
+
+# facebook:
+#   app_id:             169140053203395
