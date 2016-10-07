@@ -2,33 +2,81 @@
 
 // Style the form components here.
 
+// 1. Inputs
+// 2. Highlight
+
+// 1. Inputs //
+
 .form-input {
   @include font(body);
 
-  width: 100%;
-  margin-bottom: 0;
-  padding: 0;
-  border: 0;
-  border-bottom: 2px solid palette(gray);
-  outline: none;
-  background: none;
-  color: palette(gray, darker);
-  line-height: 1.75;
-  text-align: left;
-  resize: none;
-}
-
-.form-underline {
   display: block;
-  position: relative;
-  bottom: 2px;
-  width: 0;
-  height: 2px;
-  margin: 0 auto;
-  transition: $short;
-  background-color: palette(orange);
+  width: 100%;
+  padding: .25rem 1rem;
+  transition: background-color $short;
+  border: 0;
+  border-radius: .5rem;
+  outline: none;
+  background-color: palette(gray);
+  color: palette(white);
+  font-size: ms(0);
+
+  // Active state
+  &:focus {
+    outline: none;
+    background-color: palette($primary, light);
+  }
+
+  &::placeholder {
+    color: palette(white);
+  }
 }
 
-.form-input:focus ~ .form-underline {
-  width: 100%;
+.form-select {
+  @include font(body);
+
+  display: block;
+  height: vr(1.25);
+  margin: vr(2.25) 0 vr(0.25);
+  padding: vr(0.5);
+  transition: $short;
+  border: 1px solid palette(gray, light);
+  border-radius: 5px;
+  outline: none;
+  background-color: palette(gray, lighter);
+  font-size: ms(-1);
+
+  &:focus,
+  &:active {
+    border: 1px solid palette($primary);
+  }
+}
+
+// 2. Highlight //
+
+.form-highlight {
+  position: absolute;
+  top: 0;
+  left: vr(0.5);
+  width: 33%;
+  height: vr(1.5);
+  opacity: 0.33;
+  pointer-events: none;
+}
+
+// Active state
+.form-input:focus ~ .form-highlight {
+  animation: inputHighlighter $long;
+}
+
+// Animations
+@keyframes inputHighlighter {
+  from {
+    background: palette($primary, light);
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
 }

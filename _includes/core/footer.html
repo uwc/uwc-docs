@@ -7,22 +7,26 @@
 	{% endfor %}
 	{% for entry in site.pages %}
 		{% if entry_index0 == forloop.index %}
-			{% assign next_entry = entry.url %}
+			{% assign next_entry = entry %}
 		{% endif %}
 		{% if entry_index1 == forloop.index0 %}
-			{% assign prev_entry = entry.url %}
+			{% assign prev_entry = entry %}
 		{% endif %}
 	{% endfor %}
 
 	{% if next_entry %}
-	<a class="footer-previous" href="{{ next_entry }}">
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/></svg>
-	</a>
+		{% unless next_entry.exclude == true or next_entry.path contains ".xml" %}
+		<a class="footer-previous" href="{{ next_entry.url }}">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/></svg>
+		</a>
+		{% endunless %}
 	{% endif %}
 	{% if prev_entry %}
-	<a class="footer-next" href="{{ prev_entry }}">
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
-	</a>
+		{% unless prev_entry.exclude == true or prev_entry.path contains ".xml" %}
+		<a class="footer-next" href="{{ prev_entry.url }}">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+		</a>
+		{% endunless %}
 	{% endif %}
 </nav>
 

@@ -3,6 +3,6 @@ var gulp = require('gulp'),
   config = require('../../gulpconfig').clean;
 
 // Delete folders and files.
-gulp.task('clean', function() {
-  del(config.src);
+gulp.task('clean', function () {
+  return del(config.src);
 });

@@ -91,6 +91,11 @@ $typi: (null: (16px, 1.75), medium: (16px, 2), x-large: 20px);
     font-size: ms(2);
     font-weight: $sans-semibold;
   }
+  @else if $style == "navigation" {
+    @include font(summary);
+
+    font-size: ms(1);
+  }
   @else if $style == "body" {
     margin-top: 0;
     margin-bottom: 0;
