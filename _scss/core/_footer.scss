@@ -2,7 +2,6 @@
 
 // Style the footer here.
 
-
 .footer-previous,
 .footer-next {
   display: block;
@@ -21,17 +20,9 @@
     width: 4rem;
     height: 4rem;
     transform: translateY(-50%);
-  }
-
-  @include mappy-query(desktop) {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 4rem;
-    height: 100%;
+    fill: palette(gray);
   }
 }
-
 
 .footer-previous {
   @include mappy-query(desktop) {

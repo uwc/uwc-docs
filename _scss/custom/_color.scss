@@ -8,22 +8,20 @@
 
 // 1. Base colors
 
-$base-pink: #da1884;
-$base-orange: #ff6d2d;
-$base-turquoise: #40e0d0;
+$base-blue: #007acc;
+$base-turquoise: #21a7ac;
 
-$base-blue: #2979ff;
-$base-violet: #d500f9;
+$base-purple: #741669;
+$base-pink: #da1884;
+$base-orange: #ff512f;
 $base-red: red;
-$base-green: #00e676;
-$base-yellow: #ffea00;
 
 $factor-lighter: 32%;
 $factor-light: 8%;
 $factor-dark: 8%;
 $factor-darker: 24%;
 
-$primary: orange;
+$primary: blue;
 $secondary: turquoise;
 
 // 2. Color transformations //
@@ -58,12 +56,12 @@ $_palettes: (
     dark:    darken($base-blue, $factor-dark),
     darker:  darken($base-blue, $factor-darker)
   ),
-  violet: (
-    lighter: lighten($base-violet, $factor-lighter),
-    light:   lighten($base-violet, $factor-light),
-    base:    $base-violet,
-    dark:    darken($base-violet, $factor-dark),
-    darker:  darken($base-violet, $factor-darker)
+  purple: (
+    lighter: lighten($base-purple, $factor-lighter),
+    light:   lighten($base-purple, $factor-light),
+    base:    $base-purple,
+    dark:    darken($base-purple, $factor-dark),
+    darker:  darken($base-purple, $factor-darker)
   ),
   red: (
     lighter: lighten($base-red, $factor-lighter),
@@ -72,26 +70,12 @@ $_palettes: (
     dark:    darken($base-red, $factor-dark),
     darker:  darken($base-red, $factor-darker)
   ),
-  green: (
-    lighter: lighten($base-green, $factor-lighter),
-    light:   lighten($base-green, $factor-light),
-    base:    $base-green,
-    dark:    darken($base-green, $factor-dark),
-    darker:  darken($base-green, $factor-darker)
-  ),
-  yellow: (
-    lighter: lighten($base-yellow, $factor-lighter),
-    light:   lighten($base-yellow, $factor-light),
-    base:    $base-yellow,
-    dark:    darken($base-yellow, $factor-dark),
-    darker:  darken($base-yellow, $factor-darker)
-  ),
   gray: (
-    lighter: #f5f5f5,
-    light: #ccc,
-    base: #666,
-    dark: #333,
-    darker: #1a1a1a
+    lighter: #f6f6f6,
+    light: #eee,
+    base: #555,
+    dark: #353535,
+    darker: #222
   ),
   white: (
     base: #fff,
