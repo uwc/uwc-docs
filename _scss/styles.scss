@@ -22,9 +22,6 @@
 // Normalize: make browsers render things more consistently, from https://necolas.github.io/normalize.css/.
 @import "core/normalize";
 
-// Reset: a reset stylesheet to reduce browser inconsistencies, from http://meyerweb.com/eric/tools/css/reset/.
-@import "core/reset";
-
 // 3. Authored dependencies //
 
 @import "core/layout";
@@ -35,11 +32,11 @@
 // 4. Patters //
 
 @import "custom/syntax";
+@import "core/form";
 
 // 5. Sections //
 
 @import "custom/sidebar";
 @import "custom/metabar";
-@import "core/navigation";
 @import "core/content";
 @import "core/footer";

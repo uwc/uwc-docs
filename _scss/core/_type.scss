@@ -13,16 +13,12 @@ $sans-normal: 400;
 $sans-semibold: 600;
 $sans-bold: 700;
 
-$serif: "source-serif-pro", "Source Serif Pro", "Times New Roman", Times, serif;
-$serif-normal: 400;
-$serif-bold: 700;
-
 $code: "source-code-pro", "Source Code Pro", "Courier New", Courier, monospace;
 
 $ms-base: 1rem;
-$ms-ratio: 1.2;
+$ms-ratio: 1.25;
 
-$typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
+$typi: (null: (16px, 1.75), medium: (16px, 2), x-large: 20px);
 
 @mixin link-underline {
   display: inline-block;
@@ -64,8 +60,8 @@ $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
     line-height: 1.2;
   }
   @else if $style == "header1" {
-    margin-top: vr(0.75);
-    margin-bottom: vr(0.5);
+    margin-top: 0;
+    margin-bottom: 0;
     color: palette(gray, darker);
     font-family: $sans;
     font-size: ms(4);
@@ -73,62 +69,34 @@ $typi: (null: (18px, 1.3), medium: (21px, 1.5), x-large: 28px);
     line-height: 1.2;
   }
   @else if $style == "header2" {
-    margin-top: vr(0.5);
-    margin-bottom: vr(0.25);
+    margin-top: 0;
+    margin-bottom: 0;
     color: palette(gray, dark);
     font-family: $sans;
-    font-size: ms(1);
+    font-size: ms(2);
     font-weight: $sans-bold;
     line-height: 1.2;
   }
   @else if $style == "header3" {
     font-family: $sans;
-    font-size: ms(-1);
+    font-size: ms(0);
     font-weight: $sans-bold;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
   }
+  @else if $style == "summary" {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: $sans;
+    font-size: ms(2);
+    font-weight: $sans-semibold;
+  }
   @else if $style == "body" {
     margin-top: 0;
-    margin-bottom: vr(0.5);
-    font-family: $serif;
-    font-size: ms(0);
-    font-weight: $serif-normal;
-    line-height: 1.75;
-
-    &.-large {
-      font-size: ms(1);
-    }
-
-    a {
-      @include link-underline;
-
-      color: palette($primary);
-
-      &::after {
-        bottom: 2px;
-        background-color: transparent;
-      }
-
-      &:hover::after {
-        background-color: palette($secondary);
-      }
-    }
-  }
-  @else if $style == "app" {
+    margin-bottom: 0;
     font-family: $sans;
-    font-size: ms(0);
+    font-size: ms(1);
     font-weight: $sans-normal;
-
-    &.-large {
-      font-size: ms(1);
-    }
-
-    a {
-      @include link-underline;
-
-      color: palette($primary);
-    }
   }
   @else {
     @warn "Mixin font() received invalid input! This style does not exist.";
@@ -175,7 +143,7 @@ a {
 
 strong,
 .strong {
-  font-weight: $serif-bold;
+  font-weight: $sans-bold;
 }
 
 dfn,
@@ -252,8 +220,8 @@ img {
 ul,
 ol,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 dt {
