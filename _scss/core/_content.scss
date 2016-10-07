@@ -15,15 +15,12 @@
 
 .content {
   width: 45rem;
-  max-width: calc(100% - 4rem);
+  max-width: calc(100% - 8rem);
   margin: 0 auto;
   font-size: ms(1);
+}
 
-  @include mappy-query(desktop) {
-    max-width: calc(100% - 10rem);
-  }
-
-
+.page-content {
   h1 {
     @include font(header1);
 
@@ -38,26 +35,33 @@
     margin-bottom: .5rem;
   }
 
+  h3 {
+    @include font(header3);
+
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+  }
+
   p {
     @include font(body);
 
     &.-large {
       font-size: ms(2);
     }
+  }
 
-    a {
-      @include link-underline;
+  a {
+    @include link-underline;
 
-      color: palette($primary);
+    color: palette($primary);
 
-      &::after {
-        bottom: 2px;
-        background-color: transparent;
-      }
+    &::after {
+      bottom: 2px;
+      background-color: transparent;
+    }
 
-      &:hover::after {
-        background-color: palette($secondary);
-      }
+    &:hover::after {
+      background-color: palette($secondary);
     }
   }
 

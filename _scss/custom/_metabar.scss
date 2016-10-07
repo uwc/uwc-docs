@@ -4,7 +4,6 @@
 
 .metabar {
   @include clearfix;
-  @include font(body);
 
   padding: 1.5rem 0;
 
@@ -13,13 +12,16 @@
 
     &:hover,
     &:focus {
-      color: palette(gray);
+      color: palette($primary);
     }
   }
 }
 
 .metabar-left {
+  @include font(navigation);
+
   float: left;
+  color: palette(gray);
 }
 
 .metabar-right {

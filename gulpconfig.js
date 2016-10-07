@@ -87,31 +87,30 @@ module.exports = {
       ],
       navigation: [
         bower + 'smooth-scroll/dist/js/smooth-scroll.js',
-        bower + 'headroom.js/dist/headroom.js',
         modules + 'turbolinks/dist/turbolinks.js',
       ],
     },
     dest: assets,// Where the scripts end up in your theme
     lint: {
-      src: [src+'_js/**/*.js'] // Linting checks the quality of the code; we only lint custom scripts, not those under the various modules, so we're relying on the original authors to ship quality code
+      src: [src + '_js/**/*.js'], // Linting checks the quality of the code; we only lint custom scripts, not those under the various modules, so we're relying on the original authors to ship quality code
     },
     minify: {
-      src: assets+'**/*.js',
+      src: assets + '**/*.js',
       uglify: {}, // Default options
       dest: assets,
-      dist: dist
-    }
+      dist: dist,
+    },
   },
 
   images: {
     dist: {
-      src: [dist+'img/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `dist` since we are minifying images in place
+      src: [dist + 'img/**/*(*.png|*.jpg|*.jpeg|*.gif|*.svg)'], // The source is actually `dist` since we are minifying images in place
       imagemin: {
         optimizationLevel: 5,
         progressive: true,
-        interlaced: true
+        interlaced: true,
       },
-      dest: dist+'img/'
-    }
-  }
+      dest: dist + 'img/',
+    },
+  },
 };

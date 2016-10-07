@@ -1,4 +1,5 @@
 <div class="sidebar">
+  <span class="sidebar-gradient"></span>
   <div class="sidebar-top">
     <div class="sidebar-logo">
       <a href="{{ site.url }}{{ site.baseurl }}">
@@ -7,8 +8,10 @@
     </div>
     <div class="sidebar-search">
       <form role="search" class="search-form">
-        <input type="search" class="form-input" placeholder="Search documentation..." />
-        <span class="form-underline"></span>
+        <div class="form-group">
+          <input class="form-input" type="search" placeholder="Search documentation..." name="search" required/>
+          <span class="form-highlight"></span>
+        </div>
       </form>
     </div>
   </div>
