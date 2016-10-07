@@ -3,40 +3,62 @@
 // Style the sidebar and content here.
 
 .sidebar {
-  padding: 2rem 1rem;
-  background-color: #202020;
-  color: rgba(255, 255, 255, 0.5);
-  text-align: center;
+  width: 100%;
+  background-color: palette(gray, lighter);
+  box-shadow: 0 2px 8px -2px palette(gray, light);
+  z-index: 99999;
 
-  @media (min-width: 48rem) {
+  @include mappy-query(desktop) {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 18rem;
+    width: 20rem;
     text-align: left;
+  }
+}
+
+.sidebar-top {
+  padding: 1.5rem 2rem;
+  background-color: palette(white);
+}
+
+.sidebar-logo {
+  width: 75%;
+}
+
+.sidebar-search {
+  margin-top: vr(1);
+}
+
+.search-form {
+  position: relative;
+}
+
+.sidebar-bottom {
+  padding: 1.5rem 0;
+}
+
+.sidebar-navigation {
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .primary {
+    @include font(summary);
+
+    padding: 0 2rem;
+  }
+
+  .secondary {
+    @include font(body);
+
+    padding: 0 1rem;
 
     a {
-      color: #fff;
+      font-size: 80%;
     }
   }
-}
-
-// Sidebar nav
-.sidebar-nav {
-  padding-left: 0;
-  list-style: none;
-}
-
-.sidebar-nav-item {
-  display: block;
-
-  &.active {
-    font-weight: bold;
-  }
-}
-
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-  text-decoration: underline;
 }

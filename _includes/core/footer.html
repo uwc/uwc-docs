@@ -1,3 +1,31 @@
+<nav class="footer-nav">
+	{% for entry in site.pages %}
+		{% if entry.url == page.url %}
+			{% assign entry_index0 = forloop.index0 %}
+			{% assign entry_index1 = forloop.index %}
+		{% endif %}
+	{% endfor %}
+	{% for entry in site.pages %}
+		{% if entry_index0 == forloop.index %}
+			{% assign next_entry = entry.url %}
+		{% endif %}
+		{% if entry_index1 == forloop.index0 %}
+			{% assign prev_entry = entry.url %}
+		{% endif %}
+	{% endfor %}
+
+	{% if next_entry %}
+	<a class="footer-previous" href="{{ next_entry }}">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/></svg>
+	</a>
+	{% endif %}
+	{% if prev_entry %}
+	<a class="footer-next" href="{{ prev_entry }}">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+	</a>
+	{% endif %}
+</nav>
+
 <footer class="footer">
 	<h3 class="footer-text">{{ site.title }} © {{ site.time | date: '%Y' }} <a href="https://twitter.com/{{ site.author.twitter }}">{{ site.author.name }}</a></h3>
 </footer>

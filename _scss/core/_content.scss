@@ -5,37 +5,66 @@
 // 1. Content
 // 2. Related posts
 
-// Container
+// 1. Content
 
-.content {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-
-  @media (min-width: 48rem) {
-    max-width: 38rem;
-    margin-right: 2rem;
+.main {
+  @include mappy-query(desktop) {
     margin-left: 20rem;
   }
+}
 
-  @media (min-width: 64rem) {
-    margin-right: 4rem;
-    margin-left: 22rem;
+.content {
+  width: 45rem;
+  max-width: calc(100% - 4rem);
+  margin: 0 auto;
+  font-size: ms(1);
+
+  @include mappy-query(desktop) {
+    max-width: calc(100% - 10rem);
   }
+
 
   h1 {
     @include font(header1);
+
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   h2 {
     @include font(header2);
+
+    margin-top: 2rem;
+    margin-bottom: .5rem;
   }
 
   p {
     @include font(body);
+
+    &.-large {
+      font-size: ms(2);
+    }
+
+    a {
+      @include link-underline;
+
+      color: palette($primary);
+
+      &::after {
+        bottom: 2px;
+        background-color: transparent;
+      }
+
+      &:hover::after {
+        background-color: palette($secondary);
+      }
+    }
   }
 
   // Quotes
   blockquote {
+    @include font(summary);
+
     margin: .8rem 0;
     padding: .5rem 1rem;
     border-left: .25rem solid #e5e5e5;
@@ -50,13 +79,23 @@
       margin-bottom: 0;
     }
   }
-}
 
-.content-header {
-  @include ctnr(golden);
+  .highlight {
+    margin-bottom: 1rem;
+    border-radius: 4px;
 
-  padding-top: vr(6);
-  padding-bottom: vr(2);
+    pre {
+      margin-bottom: 0;
+    }
+  }
+
+  // Messages
+  .message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    color: #717171;
+  }
 }
 
 .content-icon {
@@ -75,23 +114,6 @@
   }
 }
 
-.highlight {
-  margin-bottom: 1rem;
-  border-radius: 4px;
-
-  pre {
-    margin-bottom: 0;
-  }
-}
-
-// Messages
-.message {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  color: #717171;
-}
-
 // Meta data line below post title
 .post-date {
   display: block;
@@ -100,8 +122,8 @@
   color: #9a9a9a;
 }
 
-
 // 2. Related posts
+
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -114,10 +136,5 @@
 
   h3 {
     margin-top: 0;
-  }
-
-  li a:hover {
-    color: #268bd2;
-    text-decoration: none;
   }
 }

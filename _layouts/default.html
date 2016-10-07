@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include core/head.html %}
+
   <body>
-    <div class="body-wrapper">
-    {% include custom/sidebar.html %}
+    <div class="site">
+      {% include custom/sidebar.html %}
 
-      <div class="content">
-      {% include custom/metabar.html %}
-
-      {{ content }}
-
-      {% include core/footer.html %}
+      <div class="main">
+        <div class="content">
+          {% include custom/metabar.html %} {{ content }} {% include core/footer.html %}
+        </div>
       </div>
 
     </div>
     {% include core/scripts.html %}
   </body>
+
 </html>

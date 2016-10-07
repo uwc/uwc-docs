@@ -1,12 +1,20 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>{{ site.title }}</h1>
-      <p class="lead">{{ site.description }}</p>
+  <div class="sidebar-top">
+    <div class="sidebar-logo">
+      <a href="{{ site.url }}{{ site.baseurl }}">
+        {% include custom/logo.html %}
+      </a>
     </div>
-      <nav id="nav" class="nav">
-        {% include custom/navigation.html context="/" %}
-      </nav>
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <div class="sidebar-search">
+      <form role="search" class="search-form">
+        <input type="search" class="form-input" placeholder="Search documentation..." />
+        <span class="form-underline"></span>
+      </form>
+    </div>
+  </div>
+  <div class="sidebar-bottom">
+    <nav class="sidebar-navigation">
+      {% include custom/navigation.html context="/" class="primary" %}
+    </nav>
   </div>
 </div>

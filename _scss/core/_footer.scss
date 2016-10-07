@@ -2,9 +2,50 @@
 
 // Style the footer here.
 
-.footer {
-  @include ctnr(golden);
 
+.footer-previous,
+.footer-next {
+  display: block;
+  transition: background-color $short;
+  background-color: palette(white);
+
+  &:hover,
+  &:focus {
+    background-color: palette(gray, lighter);
+  }
+
+  svg {
+    display: block;
+    position: relative;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+  }
+
+  @include mappy-query(desktop) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 4rem;
+    height: 100%;
+  }
+}
+
+
+.footer-previous {
+  @include mappy-query(desktop) {
+    left: 20rem;
+  }
+}
+
+.footer-next {
+  @include mappy-query(desktop) {
+    right: 0;
+  }
+}
+
+.footer {
   padding-top: vr(1);
   padding-bottom: vr(1);
 }
