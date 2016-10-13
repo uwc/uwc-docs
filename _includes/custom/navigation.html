@@ -1,8 +1,8 @@
 {% capture html %}
 	<ul>
     {% if include.context == "/" %}
-      <li class="{{ include.class }}">
-        <a class="{% if page.url == "/" %} active open{% endif %}" href="{{ site.baseurl }}/">Welcome</a>
+      <li class="{{ include.class }}{% if page.url == "/" %} open{% endif %}">
+        <a class="{% if page.url == "/" %}active{% endif %}" href="{{ site.baseurl }}/">Welcome</a>
       </li>
     {% endif %}
 

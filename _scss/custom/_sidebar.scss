@@ -89,12 +89,20 @@
     }
   }
 
+  > ul {
+    display: none;
+  }
+
   // Open state.
   &.open {
     background-color: palette(gray);
 
     > a {
       background-color: palette($primary, dark);
+    }
+
+    > ul {
+      display: block;
     }
   }
 }
@@ -112,12 +120,12 @@
     // Hover state.
     &:hover,
     &:focus {
-      color: palette($primary);
+      color: palette($primary, light);
     }
 
     // Active state.
     &.active {
-      font-weight: $sans-semibold;
+      font-weight: $sans-bold;
     }
   }
 }

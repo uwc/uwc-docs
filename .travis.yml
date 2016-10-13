@@ -45,7 +45,7 @@ script:
     # Run the website through JavaScript Code Style checker.
     - jscs .
     # Run the website through htmlproofer.
-    - bundle exec htmlproofer ./_site --check-favicon --check-html
+    - bundle exec htmlproofer ./_site --check-favicon --check-html --allow_hash_href
 
 env:
     global:
