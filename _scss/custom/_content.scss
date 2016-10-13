@@ -13,6 +13,11 @@
   }
 }
 
+.turbolinks-progress-bar {
+  height: 4px;
+  background-color: palette($primary);
+}
+
 .content {
   width: 45rem;
   max-width: calc(100% - 8rem);
