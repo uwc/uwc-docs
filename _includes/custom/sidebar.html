@@ -1,8 +1,7 @@
 <div class="sidebar">
-  <span class="sidebar-gradient"></span>
   <div class="sidebar-top">
     <div class="sidebar-logo">
-      <a href="{{ site.url }}{{ site.baseurl }}">
+      <a href="{{ site.url }}{{ site.baseurl }}" title="Go to the startpage.">
         {% include custom/logo.html %}
       </a>
     </div>
@@ -16,8 +15,8 @@
     </div>
   </div>
   <div class="sidebar-bottom">
-    <nav class="sidebar-navigation">
-      {% include custom/navigation.html context="/" class="primary" %}
+    <nav class="sidebar-nav">
+      {% include custom/navigation.html context="/" class="nav-primary" %}
     </nav>
   </div>
 </div>

@@ -17,18 +17,18 @@
   border: 0;
   border-radius: .5rem;
   outline: none;
-  background-color: palette(gray);
+  background-color: palette(gray, light);
   color: palette(white);
   font-size: ms(0);
 
   // Active state
   &:focus {
     outline: none;
-    background-color: palette($primary, light);
+    background-color: palette($primary);
   }
 
   &::placeholder {
-    color: palette(white);
+    color: palette(gray);
   }
 }
 
