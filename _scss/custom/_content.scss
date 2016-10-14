@@ -2,10 +2,12 @@
 
 // Style the page and post content here.
 
-// 1. Content
-// 2. Related posts
+// 1. General
+// 2. Sections
+// 3. Pages
+// 4. Posts
 
-// 1. Content
+// 1. General
 
 .main {
   @include mappy-query(desktop) {
@@ -25,7 +27,47 @@
   font-size: ms(1);
 }
 
+// 2. Sections
+
+.section {
+  margin: 8rem 0;
+}
+
+.section-title {
+  @include font(title);
+}
+
+.section-underline {
+  display: block;
+  width: 8rem;
+  height: .5rem;
+  margin-bottom: 2rem;
+  background-color: palette($primary);
+}
+
+.section-content {
+  @include font(summary);
+}
+
+// 3. Pages
+
+.page-title {
+  @include font(title);
+
+  margin: 3rem 0 1rem;
+}
+
+.page-underline {
+  display: block;
+  width: 8rem;
+  height: .5rem;
+  margin-bottom: 3rem;
+  background-color: palette($primary);
+}
+
 .page-content {
+  color: palette(gray, dark);
+
   h1 {
     @include font(header1);
 
@@ -49,10 +91,6 @@
 
   p {
     @include font(body);
-
-    &.-large {
-      font-size: ms(2);
-    }
   }
 
   a {
@@ -74,14 +112,13 @@
   blockquote {
     @include font(summary);
 
-    margin: .8rem 0;
+    margin: 1rem 0;
     padding: .5rem 1rem;
-    border-left: .25rem solid #e5e5e5;
-    color: #7a7a7a;
+    border-left: .25rem solid palette(gray, light);
+    color: palette(gray);
 
-    @media (min-width: 30rem) {
+    @include mappy-query(desktop) {
       padding-right: 5rem;
-      padding-left: 1.25rem;
     }
 
     p:last-child {
@@ -90,8 +127,7 @@
   }
 
   .highlight {
-    margin-bottom: 1rem;
-    border-radius: 4px;
+    margin: 1rem 0;
 
     pre {
       margin-bottom: 0;
@@ -102,41 +138,37 @@
   .message {
     margin-bottom: 1rem;
     padding: 1rem;
-    background-color: #f9f9f9;
-    color: #717171;
+    background-color: palette(blue, lighter);
+    color: palette(gray, dark);
+
+    &.alert {
+      background-color: palette(red, lighter);
+    }
+
+    &.warning {
+      background-color: palette(yellow, lighter);
+    }
+
+    &.hint {
+      background-color: palette(green, lighter);
+    }
   }
 }
 
-.content-icon {
-  display: block;
-  width: 25%;
-  height: 25%;
-  margin: 0 auto;
-  fill: url("#icon-gradient");
-
-  stop:first-child {
-    stop-color: palette($secondary);
-  }
-
-  stop:last-child {
-    stop-color: palette($primary);
-  }
-}
+// 4. Posts
 
 // Meta data line below post title
 .post-date {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: palette(gray);
 }
-
-// 2. Related posts
 
 .related {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid palette(gray, light);
 }
 
 .related-posts {

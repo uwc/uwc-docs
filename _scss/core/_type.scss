@@ -88,13 +88,8 @@ $typi: (null: (16px, 1.75), medium: (16px, 2), x-large: 20px);
     margin-top: 0;
     margin-bottom: 0;
     font-family: $sans;
-    font-size: ms(2);
-    font-weight: $sans-semibold;
-  }
-  @else if $style == "navigation" {
-    @include font(summary);
-
     font-size: ms(1);
+    font-weight: $sans-semibold;
   }
   @else if $style == "body" {
     margin-top: 0;
@@ -158,6 +153,10 @@ em,
   font-style: italic;
 }
 
+figure {
+  margin: 0;
+}
+
 code,
 kbd,
 tt,
@@ -165,20 +164,20 @@ var,
 samp,
 pre {
   padding: .25em .5em;
-  border-radius: 3px;
-  background-color: #f9f9f9;
+  border-radius: .25rem;
+  background-color: palette(gray, lighter);
   font-family: $code;
-  font-size: 85%;
+  font-size: ms(0);
 }
 
 pre {
   display: block;
   max-width: 100%;
-  margin: 0 0 1.75em;
-  padding: 1.75em;
+  margin: 0 0 2rem;
+  padding: 1.5rem;
   border: 1px solid palette(gray, light);
-  font-size: .8rem;
-  line-height: 1.4;
+  font-size: ms(0);
+  line-height: 1.75;
   white-space: pre-wrap;
   overflow: auto;
   word-break: break-all;
@@ -209,8 +208,8 @@ big {
 
 hr {
   position: relative;
-  height: 1px;
-  margin: 0 0 vr(1);
+  height: 2px;
+  margin: 1rem 0;
   border: 0;
   background-color: palette(gray, light);
 }

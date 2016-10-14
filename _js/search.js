@@ -19,7 +19,7 @@
 
       searchResults.innerHTML = appendString;
     } else {
-      searchResults.innerHTML = '<h1>No results found!</h1>';
+      searchResults.innerHTML = '<h1>No results found!</h1><p>Sorry, no content matched <i>' + searchTerm + '<i>.';
     }
   }
 
