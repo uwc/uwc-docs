@@ -5,7 +5,7 @@
 .metabar {
   @include clearfix;
 
-  padding: 1.5rem 0 .5rem;
+  padding: 1.5rem 0;
 
   a {
     transition: color $short;
@@ -18,7 +18,7 @@
 }
 
 .metabar-left {
-  @include font(navigation);
+  @include font(summary);
 
   float: left;
   color: palette(gray);

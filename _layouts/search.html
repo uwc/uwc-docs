@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include core/head.html %}
+
+  <body>
+    <div class="site">
+      {% include custom/sidebar.html %}
+
+      <div class="main">
+        <div class="content">
+          {% include custom/metabar.html %} {{ content }}
+        </div>
+      </div>
+
+    </div>
+    {% include core/scripts.html %}
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/search.js"></script>
+  </body>
+
+</html>

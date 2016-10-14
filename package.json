@@ -45,6 +45,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-update": "0.0.2",
     "gulp-util": "^3.0.7",
+    "lunr": "^0.7.1",
     "merge-stream": "^1.0.0",
     "open-color": "^1.4.0",
     "require-dir": "^0.3.0",
