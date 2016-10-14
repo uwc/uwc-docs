@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Test page
+title: Test 1
+order: 2.1
 ---
 
 <p class="message">

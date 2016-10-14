@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: section
 title: About page
+order: 2.0
 ---
 
 <p class="message">

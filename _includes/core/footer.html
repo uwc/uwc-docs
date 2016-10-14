@@ -1,18 +1,18 @@
 <footer class="footer">
 	<nav class="footer-nav">
-		{% assign entries = site.pages | sort: "path" %}
+		{% assign entries = site.pages | sort: "order" %}
 		{% for entry in entries %}
 			{% if entry.url == page.url %}
 				{% assign entry_index0 = forloop.index0 %}
 				{% assign entry_index1 = forloop.index %}
 			{% endif %}
 		{% endfor %}
-		{% for entry in site.pages %}
+		{% for entry in entries %}
 			{% if entry_index0 == forloop.index %}
-				{% assign next_entry = entry %}
+				{% assign prev_entry = entry %}
 			{% endif %}
 			{% if entry_index1 == forloop.index0 %}
-				{% assign prev_entry = entry %}
+				{% assign next_entry = entry %}
 			{% endif %}
 		{% endfor %}
 
