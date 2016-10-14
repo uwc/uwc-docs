@@ -2,48 +2,99 @@
 
 // Style the footer here.
 
-.footer-previous,
-.footer-next {
+.footer {
+  padding: 2rem 0;
+}
+
+.footer-nav {
+  @include clearfix;
+}
+
+.nav-previous,
+.nav-next {
   display: block;
-  transition: background-color $short;
-  background-color: palette(white);
+  width: 50%;
+  padding: 1rem 1.5rem;
+  transition: background-color $short, color $short;
+  background-color: palette(gray, lighter);
 
   &:hover,
   &:focus {
-    background-color: palette(gray, lighter);
-  }
+    background-color: palette($primary);
+    color: palette(white);
 
-  svg {
-    display: block;
-    position: relative;
-    top: 50%;
-    width: 4rem;
-    height: 4rem;
-    transform: translateY(-50%);
-    fill: palette(gray);
+    .nav-header,
+    .nav-title {
+      color: palette(white);
+    }
   }
 }
 
-.footer-previous {
-  @include mappy-query(desktop) {
-    left: 20rem;
+.nav-previous {
+  float: left;
+
+  .nav-arrow {
+    margin-right: 1rem;
+    float: left;
+  }
+
+  .nav-text {
+    float: left;
   }
 }
 
-.footer-next {
-  @include mappy-query(desktop) {
-    right: 0;
+.nav-next {
+  float: right;
+
+  .nav-arrow {
+    margin-left: 1rem;
+    float: right;
+  }
+
+  .nav-text {
+    float: right;
+    text-align: right;
   }
 }
 
-.footer {
-  padding-top: vr(1);
-  padding-bottom: vr(1);
+.nav-arrow svg {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem 0;
+  transition: fill $short;
+  fill: currentColor;
+}
+
+.nav-header {
+  @include font(body);
+
+  display: block;
+  margin: .25rem 0 .75rem;
+  color: palette(gray);
+  font-size: ms(0);
+  line-height: 1;
+}
+
+.nav-title {
+  @include font(header2);
+
+  margin: 0;
 }
 
 .footer-text {
   @include font(header3);
 
-  color: palette(gray);
+  margin-top: 2rem;
+  color: palette(gray, light);
   text-align: center;
+
+  a {
+    transition: color $short;
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+  }
 }

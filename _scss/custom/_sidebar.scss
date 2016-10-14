@@ -4,7 +4,7 @@
 
 .sidebar {
   width: 100%;
-  background-color: palette(gray, dark);
+  background-color: palette(gray, lighter);
 
   @include mappy-query(desktop) {
     position: fixed;
@@ -27,19 +27,14 @@
   .fill-1,
   .fill-2 {
     transition: fill $short;
-    fill: palette(white);
-  }
-
-  .fill-2,
-  .fill-2 {
-    fill: palette(gray, light);
+    fill: palette($primary);
   }
 
   &:hover .fill-1,
   &:focus .fill-1,
   &:hover .fill-2,
   &:focus .fill-2 {
-    fill: palette($primary);
+    fill: palette($primary, light);
   }
 }
 
@@ -59,7 +54,21 @@
   margin: 0;
   padding-left: 0;
   list-style: none;
-  counter-reset: navCounter;
+
+  a {
+    transition: color $short;
+
+    // Hover state.
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+
+    // Active state.
+    &.active {
+      color: palette($primary);
+    }
+  }
 }
 
 .nav-primary {
@@ -67,26 +76,12 @@
 
   position: relative;
   margin: .5rem 0;
-  color: palette(white);
-  counter-increment: navCounter;
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 2rem;
-    content: counter(navCounter) ".";
-  }
+  color: palette(gray, dark);
 
   > a {
     display: block;
     width: 100%;
-    padding: 0 4rem;
-    transition: background-color $short;
-
-    // Hover state.
-    &:hover {
-      background-color: palette(gray, darker);
-    }
+    padding: 0 2rem;
   }
 
   > ul {
@@ -94,38 +89,18 @@
   }
 
   // Open state.
-  &.open {
-    background-color: palette(gray);
-
-    > a {
-      background-color: palette($primary, dark);
-    }
-
-    > ul {
-      display: block;
-    }
+  &.open > ul {
+    display: block;
   }
 }
 
 .nav-secondary {
-  padding: 0 4rem;
-  color: palette(gray, light);
+  padding: 0 3rem;
+  color: palette(gray);
 
   a {
     @include font(body);
 
-    transition: color $short;
     font-size: ms(0);
-
-    // Hover state.
-    &:hover,
-    &:focus {
-      color: palette($primary, light);
-    }
-
-    // Active state.
-    &.active {
-      font-weight: $sans-bold;
-    }
   }
 }
