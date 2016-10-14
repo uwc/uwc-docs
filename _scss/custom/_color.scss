@@ -29,6 +29,13 @@ $_palettes: (
     dark:    $oc-orange-8,
     darker:  $oc-orange-9
   ),
+  yellow: (
+    lighter: $oc-yellow-2,
+    light:   $oc-yellow-4,
+    base:    $oc-yellow-6,
+    dark:    $oc-yellow-8,
+    darker:  $oc-yellow-9
+  ),
   teal: (
     lighter: $oc-teal-2,
     light:   $oc-teal-4,
@@ -57,12 +64,19 @@ $_palettes: (
     dark:    $oc-red-8,
     darker:  $oc-red-9
   ),
+  green: (
+    lighter: $oc-green-2,
+    light:   $oc-green-4,
+    base:    $oc-green-6,
+    dark:    $oc-green-8,
+    darker:  $oc-green-9
+  ),
   gray: (
-    lighter: #f5f5f5,
-    light: #e5e5e5,
-    base: #32373c,
-    dark: #23282d,
-    darker: #191e23
+    lighter: #f7f9fa,
+    light: #e0e3e5,
+    base: #565e64,
+    dark: #323a40,
+    darker: #10181e
   ),
   white: (
     base: #fff,

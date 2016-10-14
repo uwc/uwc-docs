@@ -1,12 +1,6 @@
 {% capture html %}
 	<ul>
-    {% if include.context == "/" %}
-      <li class="{{ include.class }}">
-        <a class="{% if page.url == "/" %} active open{% endif %}" href="{{ site.baseurl }}/">Welcome</a>
-      </li>
-    {% endif %}
-
-    {% assign entries = site.pages | sort: "path" %}
+    {% assign entries = site.pages | sort: "order" %}
     {% for entry in entries %}
 			{% unless entry.exclude == true %}
 

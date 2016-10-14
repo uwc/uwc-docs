@@ -13,18 +13,18 @@
   display: block;
   width: 100%;
   padding: .25rem 1rem;
-  transition: background-color $short;
-  border: 0;
+  transition: border $short;
+  border: 2px solid palette(gray, light);
   border-radius: .5rem;
   outline: none;
   background-color: palette(gray, light);
-  color: palette(white);
+  color: palette($primary);
   font-size: ms(0);
 
   // Active state
   &:focus {
+    border: 2px solid palette($primary);
     outline: none;
-    background-color: palette($primary);
   }
 
   &::placeholder {
