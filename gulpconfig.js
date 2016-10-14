@@ -51,6 +51,19 @@ module.exports = {
     src: [dist + assets],
   },
 
+  update: {
+    // Copies dependencies from package managers to `_scss` and renames them to allow for them to be imported as a Sass file.
+    src: [
+      bower + 'normalize-css/normalize.css',
+      modules + 'open-color/open-color.scss',
+    ],
+    dest: '_scss/core',
+    rename: {
+      prefix: '_',
+      extname: '.scss',
+    },
+  },
+
   jekyll: {
     src:    src,
     dest:   dist,

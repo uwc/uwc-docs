@@ -61,12 +61,12 @@
     color: palette($primary);
 
     &::after {
-      bottom: 2px;
+      bottom: 4px;
       background-color: transparent;
     }
 
     &:hover::after {
-      background-color: palette($secondary);
+      background-color: palette($primary);
     }
   }
 

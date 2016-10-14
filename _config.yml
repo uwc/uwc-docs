@@ -32,9 +32,10 @@ twitter:
 # google_site_verification: Z-pc_HPc4XNBz8xg1fgtxO2MSIYLirZc2jWTNq0bJyM
 
 author:
+  org:                Made by Connor.
   name:               Connor Bär
-  url:                http://connorbaer.io
-  email:              hello@connorbaer.io
+  url:                http://madebyconnor.io
+  email:              hi@madebyconnor.io
   twitter:            connor_baer
 
 version:              1.0.0
