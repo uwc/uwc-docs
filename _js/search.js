@@ -36,7 +36,8 @@
     } else {
       var noResultString = '';
       noResultString += '<h1>No results found!</h1>';
-      noResultString += '<p><i>"' + searchTerm + '"</i> did not match any content. Please try a different keyword.</p>';
+      noResultString += '<p><i>"' + searchTerm + '"</i> did not match any content. ';
+      noResultString += 'Please try a different keyword.</p>';
       searchResults.innerHTML = noResultString;
     }
   }
