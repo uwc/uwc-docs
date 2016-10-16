@@ -6,6 +6,7 @@
 // 2. Sections
 // 3. Pages
 // 4. Posts
+// 5. Custom
 
 // 1. General
 
@@ -178,4 +179,42 @@
   h3 {
     margin-top: 0;
   }
+}
+
+// 5. Custom
+
+.links-wrapper {
+  @include clearfix;
+
+  margin: 1rem 0;
+}
+
+.links-left,
+.links-right {
+  width: calc(50% - 1rem);
+  padding: 1rem 1.5rem;
+  transition: background-color $short;
+  background-color: palette(gray, lighter);
+
+  &:hover,
+  &:focus {
+    background-color: palette($primary);
+    color: palette(white);
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    @include font(body);
+  }
+}
+
+.links-left {
+  float: left;
+}
+
+.links-right {
+  float: right;
 }

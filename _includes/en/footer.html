@@ -1,6 +1,6 @@
 <footer class="footer">
 	<nav class="footer-nav">
-		{% assign entries = site.pages | sort: "order" %}
+		{% assign entries = site.pages | where:"lang", page.lang | sort: "order" %}
 		{% for entry in entries %}
 			{% if entry.url == page.url %}
 				{% assign entry_index0 = forloop.index0 %}

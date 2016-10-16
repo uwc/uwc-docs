@@ -2,10 +2,31 @@
 
 // Style the form components here.
 
-// 1. Inputs
-// 2. Highlight
+// 1. Buttons
+// 2. Inputs
+// 3. Highlight
 
-// 1. Inputs //
+// 1. Buttons
+
+.button {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  transition: background-color $short, color $short;
+  border: 3px solid palette($primary);
+  outline: none;
+  background-color: palette(white);
+  color: palette($primary);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: palette($primary);
+    color: palette(white);
+  }
+}
+
+// 2. Inputs //
 
 .form-input {
   @include font(body);
@@ -52,7 +73,7 @@
   }
 }
 
-// 2. Highlight //
+// 3. Highlight //
 
 .form-highlight {
   position: absolute;

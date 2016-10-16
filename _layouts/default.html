@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}">
   {% include core/head.html %}
 
   <body>
     <div class="site">
-      {% include custom/sidebar.html %}
+      {% assign sidebar = page.lang + post.lang | append: '/sidebar.html' %}
+      {% include {{ sidebar }} %}
 
       <div class="main">
         <div class="content">
-          {% include custom/metabar.html %} {{ content }} {% include core/footer.html %}
+          {% assign metabar = page.lang + post.lang | append: '/metabar.html' %}
+          {% include {{ metabar }} %}
+
+          {{ content }}
+
+          {% assign footer = page.lang + post.lang | append: '/footer.html' %}
+          {% include {{ footer }} %}
         </div>
       </div>
 

@@ -4,11 +4,15 @@
 
   <body>
     <div class="site">
-      {% include custom/sidebar.html %}
+      {% assign sidebar = page.lang + post.lang | append: '/sidebar.html' %}
+      {% include {{ sidebar }} %}
 
       <div class="main">
         <div class="content">
-          {% include custom/metabar.html %} {{ content }}
+          {% assign metabar = page.lang + post.lang | append: '/metabar.html' %}
+          {% include {{ metabar }} %}
+
+          {{ content }}
         </div>
       </div>
 

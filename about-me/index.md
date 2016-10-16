@@ -2,6 +2,8 @@
 layout: section
 title: About page
 order: 2.0
+lang: en
+ref: about-page
 ---
 
 <p class="message">

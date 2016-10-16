@@ -2,6 +2,8 @@
 layout: page
 title: Test 2
 order: 2.2
+lang: en
+ref: test-two
 ---
 
 <p class="message">

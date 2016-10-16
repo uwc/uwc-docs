@@ -3,26 +3,6 @@
 /* jshint -W070 */
 
 (function () {
-  function displaySearchResults(results, store) {
-    var searchResults = document.getElementById('search-results');
-
-    // Are there any results?
-    if (results.length) {
-      var appendString = '<h1>Search results</h1>';
-
-      // Iterate over the results
-      for (var i = 0; i < results.length; i++) {
-        var item = store[results[i].ref];
-        appendString += '<article><a href="' + item.url + '"><h2>' + item.title + '</h2></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></article>';
-      }
-
-      searchResults.innerHTML = appendString;
-    } else {
-      searchResults.innerHTML = '<h1>No results found!</h1><p>Sorry, no content matched <i>' + searchTerm + '<i>.';
-    }
-  }
-
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -38,6 +18,29 @@
 
   var searchTerm = getQueryVariable('query');
 
+  function displaySearchResults(results, store) {
+    var searchResults = document.getElementById('search-results');
+
+    // Are there any results?
+    if (results.length) {
+      var resultString = '<h1>Search results</h1>';
+
+      // Iterate over the results
+      for (var i = 0; i < results.length; i++) {
+        var item = store[results[i].ref];
+        resultString += '<article><a href="' + item.url + '"><h2>' + item.title + '</h2></a>';
+        resultString += '<p>' + item.content.substring(0, 150) + '...</p></article>';
+      }
+
+      searchResults.innerHTML = resultString;
+    } else {
+      var noResultString = '';
+      noResultString += '<h1>No results found!</h1>';
+      noResultString += '<p><i>"' + searchTerm + '"</i> did not match any content. Please try a different keyword.</p>';
+      searchResults.innerHTML = noResultString;
+    }
+  }
+
   if (searchTerm) {
     document.getElementById('search-box').setAttribute('value', searchTerm);
 
@@ -52,7 +55,6 @@
 
     // Add the data to lunr
     for (var key in window.store) {
-
       idx.add({
         id: key,
         title: window.store[key].title,
