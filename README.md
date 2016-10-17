@@ -3,7 +3,7 @@
 
 # UWC Docs
 
-UWC Docs is a documentation website for the UWC WordPress theme. It's loosely based on [Hyde](http://hyde.getpoole.com/), by [@mdo](https://twitter.com/mdo).
+UWC Docs is a documentation website for the [UWC WordPress theme](https://github.com/uwc/uwc-website). It's loosely based on [Hyde](http://hyde.getpoole.com/), by [@mdo](https://twitter.com/mdo).
 
 ![UWC Docs screenshot](/assets/screenshot.png?raw=true)
 
@@ -41,4 +41,4 @@ UWC Docs has three branches, two are used for active development.
 
 Open sourced under the [MIT license](LICENSE.md).
 
-<3
+❤️

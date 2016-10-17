@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Section pages
-order: 3.4
+title: Getting help
+order: 1.6
 lang: en
-ref: content-sections
+ref: basics-help
 ---
 
 Content will be added soon.

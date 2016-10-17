@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Categories
+title: Kategorien
 order: 3.2
-lang: en
-ref: content-categories
+lang: de
+ref: content-posts
 ---
 
 Content will be added soon.
