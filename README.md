@@ -5,7 +5,7 @@
 
 UWC Docs is a documentation website for the UWC WordPress theme. It's loosely based on [Hyde](http://hyde.getpoole.com/), by [@mdo](https://twitter.com/mdo).
 
-![UWC Docs screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+![UWC Docs screenshot](/assets/screenshot.png?raw=true)
 
 
 ## Contents
@@ -18,7 +18,7 @@ UWC Docs is a documentation website for the UWC WordPress theme. It's loosely ba
 
 ## Usage
 
-UWC Docs shines with a simple & intuitive interface, multi-language support and full content search. Just [download](https://github.com/uwc/uwc-docs/archive/master.zip), [install](https://jekyllrb.com/docs/installation/) and start adding your own content! 
+UWC Docs shines with a simple & intuitive interface, multi-language support and full content search. Just [download](https://github.com/uwc/uwc-docs/archive/master.zip), [install](https://jekyllrb.com/docs/installation/) and start adding your own content!
 
 
 ## Development
