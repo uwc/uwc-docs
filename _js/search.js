@@ -56,18 +56,20 @@
 
     // Add the data to lunr
     for (var key in window.store) {
-      idx.add({
-        id: key,
-        title: window.store[key].title,
-        author: window.store[key].author,
-        category: window.store[key].category,
-        content: window.store[key].content,
-      });
+      if (window.store.hasOwnProperty(key)) {
+        idx.add({
+          id: key,
+          title: window.store[key].title,
+          author: window.store[key].author,
+          category: window.store[key].category,
+          content: window.store[key].content,
+        });
 
-      var results = idx.search(searchTerm);
+        var results = idx.search(searchTerm);
 
-      // Get lunr to perform a search
-      displaySearchResults(results, window.store);
+        // Get lunr to perform a search
+        displaySearchResults(results, window.store);
+      }
     }
   }
 }());
