@@ -3,6 +3,7 @@
 // Style the sidebar and content here.
 
 .sidebar {
+  position: relative;
   width: 100%;
   background-color: palette(gray, lighter);
 
@@ -46,8 +47,8 @@
   position: relative;
 }
 
-.sidebar-bottom {
-  padding: 1.5rem 0;
+.sidebar-center {
+  padding: 1.5rem 0 3.5rem;
 }
 
 .sidebar-nav ul {
@@ -102,5 +103,24 @@
     @include font(body);
 
     font-size: ms(0);
+  }
+}
+
+.sidebar-bottom {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5rem 2rem;
+
+  a {
+    transition: color $short;
+
+    &:hover,
+    &:focus {
+      color: palette($primary);
+    }
+
+    &.active {
+      font-weight: $sans-bold;
+    }
   }
 }
