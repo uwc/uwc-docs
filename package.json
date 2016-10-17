@@ -1,7 +1,7 @@
 {
   "name": "uwc-docs",
   "version": "1.0.0",
-  "description": "A documentation.",
+  "description": "Documentation website for the UWC WordPress theme.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

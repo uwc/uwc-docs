@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Configuration
-order: 1.4
+title: Requirements
+order: 1.2
 lang: en
-ref: basics-configuration
+ref: basics-requirements
 ---
 
 Content will be added soon. 
