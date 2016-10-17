@@ -32,6 +32,10 @@
 
 .section {
   margin: 8rem 0;
+
+  @include mappy-query(phone) {
+    margin: 2rem 0;
+  }
 }
 
 .section-title {
@@ -48,6 +52,21 @@
 
 .section-content {
   @include font(summary);
+
+  a {
+    @include link-underline;
+
+    color: palette($primary);
+
+    &::after {
+      bottom: 4px;
+      background-color: transparent;
+    }
+
+    &:hover::after {
+      background-color: palette($primary);
+    }
+  }
 }
 
 // 3. Pages
@@ -195,6 +214,7 @@
   padding: 1rem 1.5rem;
   transition: background-color $short;
   background-color: palette(gray, lighter);
+  color: palette(gray, dark);
 
   @include mappy-query(phone) {
     width: 100%;

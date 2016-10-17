@@ -120,7 +120,7 @@
     }
 
     &.active {
-      color: palette($primary);
+      font-weight: $sans-bold;
     }
   }
 }

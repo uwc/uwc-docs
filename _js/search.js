@@ -70,4 +70,4 @@
       displaySearchResults(results, window.store);
     }
   }
-})();
+}());
