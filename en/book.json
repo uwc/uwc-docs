@@ -1,3 +1,7 @@
 {
-    "language": "en"
+  "plugins": [
+    "theme-faq",
+    "language-picker"
+  ],
+  "language": "en"
 }

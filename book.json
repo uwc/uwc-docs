@@ -1,6 +1,6 @@
 {
-    "plugins": [
-      "theme-faq",
-      "language-picker"
-    ]
+  "plugins": [
+    "theme-faq",
+    "language-picker"
+  ]
 }
