@@ -1,6 +1,9 @@
 {
+  "title": "Knowledge Base",
   "plugins": [
-    "theme-faq",
-    "language-picker"
-  ]
+    "theme-faq"
+  ],
+  "styles": {
+      "website": "./styles/website.css"
+  }
 }

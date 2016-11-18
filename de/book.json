@@ -1,7 +1,0 @@
-{
-  "plugins": [
-    "theme-faq",
-    "language-picker"
-  ],
-  "language": "de"
-}

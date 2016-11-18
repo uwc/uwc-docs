@@ -17,8 +17,13 @@
 {% endblock %}
 
 {% block faq_menu %}
-<ul class="nav navbar-nav navbar-right">
-    <li><a href="#">Contact us</a></li>
-    <li><a href="#">Return to SuperWebsite</a></li>
+<ul class="nav navbar-nav navbar-right" role="navigation">
+  {% for lang in languages.list %}
+      <li>
+          <a href="{{ (lang.id + "/README.md")|contentURL }}">{{ lang.title }}</a>
+      </li>
+  {% endfor %}
 </ul>
+
+
 {% endblock %}
