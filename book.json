@@ -1,6 +1,12 @@
 {
-  "title": "UWC Documentation",
-  "plugins": [
-    "theme-faq"
-  ]
+    "title": "UWC Documentation",
+    "plugins": [
+        "theme-faq",
+        "ga"
+    ],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-37412525-6"
+        }
+    }
 }

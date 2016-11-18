@@ -6,9 +6,6 @@
   "dependencies": {
     "gitbook-plugin-theme-faq": "^1.1.0"
   },
-  "devDependencies": {
-    "gitbook-summary": "^1.1.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
