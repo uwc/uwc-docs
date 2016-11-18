@@ -1,9 +1,6 @@
 {
-  "title": "Knowledge Base",
+  "title": "UWC Documentation",
   "plugins": [
     "theme-faq"
-  ],
-  "styles": {
-      "website": "./styles/website.css"
-  }
+  ]
 }

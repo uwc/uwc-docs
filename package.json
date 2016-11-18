@@ -1,0 +1,25 @@
+{
+  "name": "uwc-docs",
+  "version": "1.0.0",
+  "description": "Documentation for the UWC WordPress theme.",
+  "main": "_book/index.html",
+  "dependencies": {
+    "gitbook-plugin-theme-faq": "^1.1.0"
+  },
+  "devDependencies": {
+    "gitbook-summary": "^1.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uwc/uwc-docs.git"
+  },
+  "author": "Connor Baer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uwc/uwc-docs/issues"
+  },
+  "homepage": "https://docs.uwc.io"
+}

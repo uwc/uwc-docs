@@ -1,29 +1,27 @@
 {% extends template.self %}
 
 {% block faq_header_brand %}
-<img src="https://docs.uwc.io/logo.png" height="30" />
+<img src="/gitbook/images/logo.png" height="32" />
 {% endblock %}
 
 {% block header_nav %}
 <a href="https://github.com/GitbookIO/gitbook/blob/master/docs/{{ file.path }}" target="_blank" class="btn btn-link pull-right hidden-xs">
     <i class="octicon octicon-mark-github"></i> Edit on GitHub
 </a>
-<a href="{{ "faq.md"|resolveFile }}" class="btn btn-link pull-right hidden-xs">
-    F.A.Q
-</a>
-<a href="https://github.com/GitbookIO/gitbook/blob/master/CHANGES.md" target="_blank" class="btn btn-link pull-right hidden-xs">
-    {{ book.version }}
-</a>
 {% endblock %}
 
+
+
 {% block faq_menu %}
-<ul class="nav navbar-nav navbar-right" role="navigation">
-  {% for lang in languages.list %}
-      <li>
-          <a href="{{ (lang.id + "/README.md")|contentURL }}">{{ lang.title }}</a>
-      </li>
-  {% endfor %}
+<ul class="nav navbar-nav navbar-right">
+  <li><a href="https://toolchain.gitbook.com" target="_blank">View on WordPress</a></li>
+  <li><a href="https://developer.gitbook.com" target="_blank">View on GitHub</a></li>
+  <li><a href="https://www.gitbook.com/book/connor-baer/uwc-docs/discussions" target="_blank">Ask a Question</a></li>
 </ul>
+{% endblock %}
 
-
+{% block faq_footer %}
+<div class="faq-page-footer">
+    <a href="https://www.gitbook.com" target="_blank">{{ "GITBOOK_LINK"|t }}</a>&#160;&#160;&#183;&#160;&#160;<a href="https://github.com/uwc/uwc-docs/blob/master/{{ file.path }}" target="_blank">Last edited on {{ file.mtime|date('MMM Do YYYY') }}</a>
+</div>
 {% endblock %}
